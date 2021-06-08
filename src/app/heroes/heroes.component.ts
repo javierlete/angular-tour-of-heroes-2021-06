@@ -20,7 +20,18 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().subscribe(heroes => this.heroes = heroes);
+
+    // this.heroService.getHeroes().subscribe(this.guardarHeroes.bind(this));
+
+    // this.heroService.getHeroes().subscribe((function(heroes: Hero[]) {
+    //   this.heroes = heroes;
+    // }).bind(this));
+  }
+
+  guardarHeroes(heroes: Hero[]) {
+    console.log(this);
+    this.heroes = heroes;
   }
 
   onSelect(hero: Hero): void {
