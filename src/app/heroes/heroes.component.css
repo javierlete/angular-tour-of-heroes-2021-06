@@ -7,39 +7,38 @@ ul {
     width: 15em;
 }
 
-li {
-    cursor: pointer;
+ul li {
     position: relative;
-    left: 0;
+    cursor: pointer;
+}
+
+ul li:hover {
+    left: .1em;
+}
+
+ul a {
+    color: #333;
+    text-decoration: none;
     background-color: #EEE;
     margin: .5em;
     padding: .3em 0;
     height: 1.6em;
     border-radius: 4px;
+    display: block;
+    width: 100%;
 }
 
-li:hover {
+ul a:hover {
     color: #2c3a41;
     background-color: #e6e6e6;
-    left: .1em;
 }
 
-li.selected {
-    background-color: black;
-    color: white;
+ul a:active {
+    background-color: #525252;
+    color: #fafafa;
 }
 
-li.selected:hover {
-    background-color: #505050;
-    color: white;
-}
-
-li.selected:active {
-    background-color: black;
-    color: white;
-}
-
-.badge {
+ul .badge {
     display: inline-block;
     font-size: small;
     color: white;
@@ -50,10 +49,8 @@ li.selected:active {
     left: -1px;
     top: -4px;
     height: 1.8em;
+    min-width: 16px;
+    text-align: right;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
-}
-
-input {
-    padding: .5rem;
 }
